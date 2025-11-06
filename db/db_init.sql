@@ -46,8 +46,7 @@ CREATE TABLE dbo.ChronoLog (
     receivedAt DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
     jsonRpcId NVARCHAR(100),
     filter NVARCHAR(200) NULL,
-    payload NVARCHAR(MAX) NOT NULL,
-    source NVARCHAR(100) NULL
+    payload NVARCHAR(MAX) NOT NULL
 );
 GO
 

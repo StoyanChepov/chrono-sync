@@ -69,7 +69,7 @@ app.get("/collect", async (req, res) => {
     if (whereClauses.length) {
       timelogQuery += " WHERE " + whereClauses.join(" AND ");
     }
-    timelogQuery += " ORDER BY WorkDate DESC, id DESC";
+    timelogQuery += " ORDER BY workDate DESC, id DESC";
 
     const timelogsRs = await tlReq.query(timelogQuery);
     const timelogs = timelogsRs.recordset || [];
