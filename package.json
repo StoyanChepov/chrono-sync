@@ -1,0 +1,37 @@
+{
+  "name": "chrono-sync",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db": "node db/db_script.js",
+    "dev:collector": "nodemon collector/collector.js",
+    "dev:recorder": "nodemon recorder/recorder.js",
+    "dev:all": "concurrently \"npm run dev:collector\" \"npm run dev:recorder\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StoyanChepov/chrono-sync.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StoyanChepov/chrono-sync/issues"
+  },
+  "homepage": "https://github.com/StoyanChepov/chrono-sync#readme",
+  "dependencies": {
+    "axios": "^1.13.2",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "json-rpc-2.0": "^1.7.1",
+    "mssql": "^12.1.0",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "nodemon": "^3.1.10"
+  }
+}
